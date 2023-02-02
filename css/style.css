@@ -505,20 +505,23 @@ footer .footer-socials img {
     border-radius: 50%;
     margin-right: 1rem;
 }
-
 footer .footer-socials img:hover {
     background: var(----primary);
 }
-/* -----------responsive------------ */
 
-.mobile-nav{
-    position: relative;
-}
 /* =================responsive ====================== */
-
 /* mobile  */
 @media (max-width:576px) {
-    
+    #btn1{
+        visibility: visible;
+    }
+    #btn1,#btn2:hover{
+        cursor: pointer;
+    }
+
+    .mobile-nav{
+        position: relative;
+      }
     .hero {
         flex-direction: column;
     }
@@ -527,18 +530,13 @@ footer .footer-socials img:hover {
         top: 250px;
         padding: 1rem;
     }
-
     header {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
-        padding-bottom: 2rem;
-    }
-    header.main-nav{
-        display: none;
+        padding-bottom: 6rem;
     }
     .hero .left img{
         margin-top: -30px;
         margin-right: -2rem;
-
     }
     .hero .right{
         background: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.9));
@@ -549,11 +547,9 @@ footer .footer-socials img:hover {
     .about .right-mobile{
         text-align: center;
         margin-top: 2rem;
-
     }
     section.about{
         padding-bottom: 2.5rem;
-
     }
     section .container .socials{
         justify-content: center;
@@ -562,12 +558,11 @@ footer .footer-socials img:hover {
         padding: 3rem 0;
     }
     section.services .card-wrapper {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr) !important;
     }
     section.freelancer{
       padding-bottom: 8rem;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 85%, 0 100%);
-
     }
     section.freelancer p{
         padding: 0 2rem;
@@ -582,30 +577,31 @@ footer .footer-socials img:hover {
         padding-bottom: 8rem;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 98%, 0 100%);
     }
+    section.contact .input-wrap{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+    }
    
 }
     /* min width  */ 
 
-@media (min-width:778px){
+@media (min-width:768px){
     #btn1{
-        display: none;
+       visibility: hidden;   
     }
-
     #btn2{
-        display: none;
+      visibility: hidden;
     }
-  
-  
 }
 
 /* tablet  */
 @media(max-width:1024px) {
     #off-mobile{
-        display: none;
+        visibility: hidden;
     }
     header #main-nav {
-        display: none;
-
+        visibility: hidden;
     }
 
     .hero .left img {
@@ -676,13 +672,12 @@ footer .footer-socials img:hover {
         position: fixed;
         /* background-color: pink; */
         background-color: var(----dark);
-        
     }
      #btn2{
         border: none;
         top: 20px;
         right: 65px;
-        z-index: 1001;
+        z-index: 1002;
         position: fixed;
         outline: none;
         /* background-color: white; */
@@ -692,7 +687,7 @@ footer .footer-socials img:hover {
     .nav-list{
         width: 100%;
         height: 100%;
-        z-index: 1001;
+        z-index: 1002;
         position: fixed;
         display: flex;
         flex-direction: column;
